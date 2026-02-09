@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <title>Contact Us &ndash; Discover Maryland</title>
+      <meta charset="UTF-8">
+      <meta name="description" content="Contact us to discover more about Maryland&rsquo;s cities, culture, and community.">
+      <link rel="stylesheet" href="../styles.css">
+      <!--Make webpage mobile friendlywith page witdth matching device screen -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+   <body>
+    <!--Header with website title, tagline and state flag-->
+    <header>
+        <a href="../index.html">
+            <img src="../Homepage-Assets/md-large-flag.png" alt="Maryland Flag" class="flag">
+        </a>
+        <div class="title-block" >
+            <h1>Contact Us</h1>
+            <p>Discover More About Maryland</p>
+        </div>                 
+    </header>
+
+    <!--Navigation bar-->
+    <nav>     
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Annapolis/Annapolis.html">Annapolis</a></li>
+            <li><a href="../Baltimore/Baltimore.html">Baltimore</a></li>
+            <li><a href="../Ocean-City/Ocean-City.html">Ocean City</a></li>
+            <li><a href="Contact Us/Contact-Us.html" class="current">Contact Us</a></li>
+            <!--<li><input type="text" placeholder="Search..."></li>-->                  
+        </ul>       
+    </nav>
+
+    
+    <main>
+        <!--Contact form-->
+        <div class="contactHeader">
+            <h2>We would love to hear from you!</h2>
+            <p> Please fill out the form below and let us know how we can help.</p>
+        </div>
+        
+                
+        <form id="contactForm">
+
+            <!-- First + Last Name fields positioned horizontally on same line -->             
+            <div class="nameRow">
+                <div class="fieldHalf">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="fieldHalf">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+
+            <!-- Email + Confirmation Email + Questions/Comments fields stacked vertically -->
+            <div class="fullField">                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="fullField">
+                <label for="confirmEmail">Confirm Email</label>
+                <input type="email" id="confirmEmail" name="confirmEmail" required>
+            </div>
+
+            <div>
+                <label for="message">Questions/Comments</label>
+                <textarea id="message" name="message" rows="10"></textarea>
+            </div>           
+            
+            <!--Submit button: no form submission-->
+            <div>
+               <button type="button" class="submitButton" onclick="emailConfirmation(event)">Submit</button> 
+            </div>
+            
+        </form>
+
+
+
+        <!--Javascript function for email confirmation validation-->
+        <script>            
+            function emailConfirmation(event) {
+                event.preventDefault();
+
+                const email = document.getElementById('email').value.trim();
+                const confirmEmail = document.getElementById('confirmEmail').value.trim();
+
+                if (email === "" || confirmEmail === "") {
+                    alert("Both email fields are required.");
+                    return;
+                }
+
+                if (email !== confirmEmail) {
+                    alert("The email addresses do not match. Please try again.");
+                    return;
+                }
+
+                alert("Thank you! Your email has been confirmed.");
+                document.getElementById("contactForm").reset();
+            }
+        </script>
+    </main>
+
+    <!--Add footer-->
+    <footer>
+        <p>
+            <p class="rights">&copy; 2025 All rights reserved &nbsp;|&nbsp;
+            Discover Maryland: Cities, Culture, and Community</p><br>
+            <div class="source">
+                <p class="source-color">SOURCES CITED:</p><br>                
+                <P>Maryland flag image: <a href="https://flagpedia.net/us-states/maryland/download/images#google_vignette" target="_blank">Flagpedia.net</a></P>
+            </div>   
+        </p>
+    </footer>
+    
+   </body>
+</html>

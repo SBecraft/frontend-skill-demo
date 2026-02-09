@@ -1,0 +1,599 @@
+/* ------------------------------
+   1. GLOBAL STYLES
+------------------------------ */
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* HEADER */
+header {
+  display: flex;
+  flex-wrap: wrap;          /* allows items to move to new lines */
+  align-items: center;
+  justify-content: center;  /* keeps everything centered */
+  text-align: center;
+  padding: 15px 20px;
+  background: linear-gradient(to right, #fffbe6, #f2f2f2);
+}
+
+header h1 {
+  color: #000000;
+  font-size: 4rem;          /* reduced from 6rem for better fit */
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  flex: 1 1 100%;           /* forces title to take full width */
+  margin: 0;
+  text-align: center;
+}
+
+header p {
+  color: #000000;
+  font-size: 2rem;          /* reduced slightly */
+  flex: 1 1 100%;           /* tagline also gets full width */
+  margin: 0;
+}
+
+.title-block {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  left: -75px;
+}
+
+.flag {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+@media (max-width: 800px) {
+  .flag {
+    width: 200px;
+  }
+
+  header h1 {
+    font-size: 4rem;
+  }
+
+  header p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .flag {
+    width: 150px;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+/* NAVIGATION */
+nav {
+  background-color:#333;  /* Navigation bar in dark charcoal gray */
+  padding: 10px;
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto; /* This pushes the navigation links to the right side of bar */
+}
+
+.nav-links a.current {
+  color: #ffcc00; /* Webpage link in use in Maryland gold */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.nav-links a {
+  color: white;     /* Nav link names in white */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+.nav-links input[type="text"] {
+  margin-left: auto;
+  padding: 5px;
+  background-color: white;   /* Search box background */
+  color: black;              /* Text typed by user */
+}
+
+.nav-links a:hover {  
+    color: #ffd633; /* soft pale gold glow */
+}
+
+
+
+/* CONTENT WRAPPER FOR MAIN + ASIDE to keep layout stable */
+.contentWrapper {
+  display: flex;  /* ASIDE + MAIN stay side-by-side */
+  align-items: stretch; /* makes ASIDE + MAIN equal heights */
+  flex-grow: 1;   /* This is what fills the page and pushes footer down */
+}
+
+aside {
+  width: 25%;
+  flex-shrink: 0;
+}
+--
+main {
+  width: 75%;
+}
+
+
+
+/* MAIN */
+main {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+}
+
+.center {
+  text-align: center;
+}
+
+/* ASIDE */
+aside {
+  border-right: 16px solid #9d2235; /* Vertical red divider between ASIDE + MAIN sections */
+  padding: 1rem;
+  background-color: #f2f2f2; /* Light gray background */
+  box-sizing: border-box;
+  position: relative;
+}
+
+.aside-lists {
+  padding-left: 20px;
+  font-size: 1.0rem;
+  line-height: 1.6;
+  color: black; /* or remove this if you already have default text color */
+  margin-bottom: 50px; /* space after each list section */
+}
+
+.aside-lists li { 
+  margin-bottom: 20px; /* adds space between each fact */ 
+}
+
+.aside-lists li::marker {
+  color: #9d2235; /* Maryland flag red */
+  font-size: 1.5rem; /* makes the bullet bigger */
+}
+
+.aside-lists a {
+  color: #9d2235;
+  text-decoration: underline;
+}
+
+.aside-lists a:hover { 
+  text-decoration: underline;
+  color: #ffcc00; /* Maryland gold */
+}
+
+.image-container {
+  width: 95%;
+  overflow: hidden;
+}
+
+
+
+.state-seal {
+    position: absolute;
+    bottom: 20px;   /* adjust as needed */
+    left: 20px;    /* moves it to the lower-right corner */
+    width: 120px;   /* resize to fit your design */
+    
+    
+}
+
+
+
+/* FOOTER */
+footer {
+  margin-top: auto;
+  background-color: #333;   /* Dark charcoal gray background */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #ffcc00; /* Maryland gold */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;  /* Stack header, contentWrapper, footer vertically */
+} 
+
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.source {
+  text-align: left;
+  display: inline-block; /* allows centering */  
+}
+
+.rights { 
+  margin-bottom: 20px; /* increase this number for more space */ 
+}
+
+
+
+.source-color {
+  color: #bbb
+  
+}
+
+
+
+/* ------------------------------
+   4. HOME PAGE SECTIONS
+------------------------------ */
+
+/* Homepage Images and Info section */
+
+.md-layout {
+  overflow: hidden; /* contains floated elements */
+}
+
+.md-images {
+  width: 50%;
+  float: right;
+  position: relative;
+  top: -615px;
+  left: -40px;
+}
+
+.md-info {     /* Float applies to Maryland info and crab image */
+    width: 45%;      
+}
+
+.md-info p { 
+  text-align: left; /* paragraphs become normal block text */ 
+  margin: 0 auto; /* centers the paragraph block itself */ 
+  max-width: 700px; /* optional: keeps paragraphs nicely readable */ 
+  text-indent: 2em; /* or 20px, or whatever size you like */
+}
+
+.md-info h2 {
+  text-align: center;
+}
+
+.text-block {
+  max-width: 800px;         /* limits line length for readability */
+  margin: 0 auto;           /* centers the block horizontally */
+  padding: 20px;            /* adds space inside the block */
+  text-align: justify;      /* aligns text to both left and right edges */
+  background-color: #ffffff; /* optional: white background */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* optional: subtle shadow */
+  border-radius: 8px;       /* optional: rounded corners */
+}
+
+.text-block p { 
+  text-align: justify; 
+}
+
+
+
+/* Maryland vs United State Table */
+
+table {
+    width: 50%; /* table uses full width of its container */ 
+    border-collapse: collapse; 
+    table-layout: fixed; /* needed so column widths work predictably */ 
+    margin: 0 auto; /* centers the table in its container */
+    position: relative;
+    left: 350px;
+    top: -200px;
+    
+    padding: 50px 100px 10px 50px; /* adds horizontal breathing room */
+        
+}
+
+th, td { 
+  border: 2px solid gray; 
+  text-align: left; 
+  padding: 8px 12px; /* no width here */ 
+}
+
+
+caption {            /* Bold caption */
+  font-weight: bold;
+  font-size: 1.5em; /* bigger title */
+}
+
+.md-compare {            /* float the table to the right of the Key Cities ordered list */
+    
+    margin-left: 20px;   /* space between table and city list */
+    margin-bottom: 20px; /* optional spacing */
+}
+
+th:first-child,   /* Make Category column 40% */
+td:first-child {
+  width: 40%;
+}
+
+th:nth-child(2),    /* Maryland and United States 30% each */
+td:nth-child(2),
+th:nth-child(3),
+td:nth-child(3) {
+  width: 30%;
+}
+
+
+
+
+
+
+
+/* Key Cities List */
+
+.list {
+  padding-left: 20px;
+  font-size: 1.0rem;
+  line-height: 1.6;
+  color: black; /* or remove this if you already have default text color */
+  
+}
+
+.list li { 
+  margin-bottom: 20px; /* adds space between each fact */ 
+}
+
+.list li::marker {
+  color: #000000; /* list numbers in black */
+  font-size: 1.5rem; /* makes the bullet bigger */
+}
+
+.list a {
+  color: #9d2235;
+  text-decoration: underline;
+}
+
+.list a:hover { 
+  text-decoration: underline;
+  color: #ffcc00; /* Maryland gold */
+}
+
+#key-cities {
+  position: relative;
+  left: 600px;
+  top: 100px;
+  margin: 10px auto;
+  padding: 0 20px;
+  max-width: 1000px;
+  box-sizing: border-box;
+  flex: 1 1 400px;
+  float: left;
+}
+
+
+
+.small-image {
+  width: 50%;
+  position: relative;
+  top: -50px;
+  left: 200px; 
+  float: right; 
+}
+
+/* ------------------------------
+   5. ANNAPOLIS PAGE SECTIONS
+------------------------------ */
+
+.annapolis-city-details {
+  position: relative;
+  left: 130px;
+  top: 80px;
+  margin: 10px auto;
+  padding: 0 20px;
+  max-width: 1000px;
+  box-sizing: border-box;
+  flex: 1 1 400px;
+  float: left;;
+}
+
+
+.annapolis-city-layout {
+  overflow: hidden; /* contains floated elements */
+  position: relative;
+  left: -40px;
+}
+
+.annapolis-city-images {
+  
+  float: right;
+  position: relative;
+  top: -415px;
+  left: -65px;
+}
+
+/* ------------------------------
+   5. BALTIMORE PAGE SECTIONS
+------------------------------ */
+
+.baltimore-city-details {
+  position: relative;
+  left: 130px;
+  top: -420px;
+  margin: 10px auto;
+  padding: 0 20px;
+  max-width: 1000px;
+  box-sizing: border-box;
+  flex: 1 1 400px;
+  float: left;;
+}
+
+.baltimore-city-layout {
+  overflow: hidden; /* contains floated elements */
+  position: relative;
+  left: 30px;
+}
+
+.baltimore-city-images {
+  
+  float: right;
+  position: relative;
+  top: -415px;
+  left: 275px;
+}
+
+
+/* ------------------------------
+   5. OCEAN CITY PAGE SECTIONS
+------------------------------ */
+
+.ocean-city-details {
+  position: relative;
+  left: 130px;
+  top: 150px;
+  margin: 10px auto;
+  padding: 0 20px;
+  max-width: 1000px;
+  box-sizing: border-box;
+  flex: 1 1 400px;
+  float: left;;
+}
+
+.ocean-city-layout {
+  overflow: hidden; /* contains floated elements */
+  position: relative;
+  left: 15px;
+}
+
+.ocean-city-images {
+  
+  float: right;
+  position: relative;
+  top: -415px;
+  left: -100px;
+}
+
+
+/* ------------------------------
+   6. CONTACT PAGE
+------------------------------ */
+
+/* Center Contact Form message */
+.contactHeader {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+  left: 80px;  
+} 
+
+
+/* Contact form */
+#contactForm {
+  margin-top: 20px;
+  position: relative;
+  left: 80px;     
+}
+
+
+/* First + Last Name side-by-side on Contact Form */
+.nameRow {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* Half field width for first and last name elements on same line */
+.fieldHalf {
+  flex: 1;
+}
+
+/* Full-width stacked fields */
+.fullField {
+  margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Inputs + Textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Submit Button */
+.submitButton {
+  background-color: #9d2235; /* Maryland Red */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submitButton:hover {
+  background-color: #ffcc00; /* Maryland gold */
+}
+
+/* Center the Submit button */
+.submitButton {
+  display: block;
+  margin: 20px auto;
+}
+
+
