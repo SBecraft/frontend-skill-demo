@@ -18,7 +18,7 @@
 - VS Code
 - Draw.io (wireframes)
 
-# Website Preview
+# WEBSITE PREVIEW
 
 ## Homepage
 ![Maryland Homepage 1](Website-Screenshots/MD_Homepage_1.png)
