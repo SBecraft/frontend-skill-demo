@@ -48,19 +48,22 @@
 ![Ocean City Homepage 2](Website-Screenshots/OceanCity_webpage_2.png)
 
 ---
-<br>
+
 ## Contact Us
 ![Contact Webpage](Website-Screenshots/Contact_webpage.png)
 
-## Wireframes
+<br>
 
+## WIREFRAMES
 ### Homepage
 ![Homepage Wireframe](Wireframes/Homepage_Wireframe.png)
+
+<br>
 
 ### All Other Webpages
 ![City Pages Wireframe](Wireframes/City_Pages_Wireframe.png)
 
-
+<br>
 
 ### SOURCES CITED
 
