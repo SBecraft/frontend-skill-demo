@@ -54,7 +54,7 @@
 
 <br>
 
-## WIREFRAMES
+# WIREFRAMES
 ### Homepage
 ![Homepage Wireframe](Wireframes/Homepage_Wireframe.png)
 
@@ -65,7 +65,7 @@
 
 <br>
 
-### SOURCES CITED
+# SOURCES CITED
 
 #### Global 
 
