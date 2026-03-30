@@ -18,6 +18,40 @@
 - VS Code
 - Draw.io (wireframes)
 
+# Website Preview
+
+## Homepage
+![Maryland Homepage 1](Website-Screenshots/MD_Homepage_1.png)
+
+![Maryland Homepage 2](Website-Screenshots/MD_Homepage_2.png)
+
+---
+
+## Annapolis
+![Annapolis Webpage 1](Website-Screenshots/Annapolis_webpage_1.png)
+
+![Annapolis Webpage 2](Website-Screenshots/Annapolis_webpage_2.png)
+
+---
+
+## Baltimore
+![Baltimore Homepage 1](Website-Screenshots/Baltimore_webpage_1.png)
+
+![Baltimore Homepage 2](Website-Screenshots/Baltimore_webpage_2.png)
+
+---
+
+## Ocean City
+![Ocean City Homepage 1](Website-Screenshots/OceanCity_webpage_1.png)
+
+![Ocean City Homepage 2](Website-Screenshots/OceanCity_webpage_2.png)
+
+---
+
+## Contact Us
+![Contact Webpage](Website-Screenshots/Contact_webpage.png)
+
+
 ### SOURCES CITED
 
 #### Global 
