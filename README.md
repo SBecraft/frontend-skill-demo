@@ -1,3 +1,4 @@
+**Note: Claude Code was only used to add the LICENSE file and the license badge. All website content and code was written by hand by SBecraft in VS Code.**
 
 # FRONT-END WEB DEVELOPMENT PROJECT
 ## State Information Website Demo
